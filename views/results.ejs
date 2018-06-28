@@ -1,0 +1,68 @@
+<% include partials/header %>
+
+    <h1 class="resulth1">Your Results: <a class="linkback" href="/"><i class="fas fa-search"></i></a></h1>
+        <br>
+    <% if (data == null) { %>
+        <p>No results. Please try refining your search terms.</p>
+    <% } else { %>
+     
+    <ul>
+        <% data["Search"].forEach(function(movie) { %>
+        <li>
+            <strong>
+                <%= movie["Title"] %>
+            </strong>
+             (<%=movie["Year"]%>)
+                <br>
+                <br>
+                <% if (movie["Poster"] === "N/A") { %>
+                    <p>No poster available.</p>
+                <% } else { %>
+                    <img src="<%=movie["Poster"]%>">
+                <% } %>
+                <br>
+                
+            <button value="<%=movie["imdbID"]%>">Plot Info</button>
+            <div id="<%=movie["imdbID"]%>"></div>
+                
+        </li>
+        <% }) %>
+    </ul>
+     
+    <% } %>
+    
+    
+       <script>    
+      $(document).ready(function(){
+        
+        $("p").click(function(){
+          $(this).hide();
+          
+        });
+        
+        $("button").on('click',function(){
+          
+          let movieID = $(this).attr("value");
+          let container = $("#" + movieID);
+          
+          $.ajax({
+            method: 'GET',
+            url: "https://www.omdbapi.com/?i=" + movieID + "&apikey=thewdb",
+            success: function(results){
+              //  $("p").addClass("new");
+               
+                var movies = results;
+                
+                //Create a string with information you want to return like actors, plot, etc....
+                let movieString = "<p>" + movies.Plot + "</p>"
+                container.append(movieString);
+            }
+          })
+          
+        }); 
+        
+      });
+       </script>   
+    
+ 
+<% include partials/footer %>

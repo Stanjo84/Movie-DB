@@ -1,0 +1,140 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffa500;
+}
+
+#container {
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+	width: 50%;
+	border: 1px #232323;
+	border-radius: 20px;
+	margin: 100px auto;
+    background: #fff;  
+    padding-top: 5px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+    text-align: ;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li:nth-child(2n) {
+    background: ;
+}
+
+ul li {
+    text-align: center;
+    margin: auto;
+    display: ;
+    padding: 20px;
+    font-size: 25px;
+}
+
+li:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.btn, button {
+    background-color: #ffa500;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e59400;
+}
+
+input {
+	color: #6D6D5F;
+	font-size: 1rem;
+    font-weight: normal;
+    background-color: #fff6e5;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0); /*clear the border*/
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+p {
+    color: black;
+    font-size: 15px;
+}
+
+.new {
+   text-align: center; 
+   text-transform: uppercase;
+   color: orange; 
+}
+
+
+.resulth1 {
+    border-bottom:  2px solid #cccccc ;
+}
+
+.linkback {
+    font-size: 22px;
+    float: right;
+    margin: 10px;
+    color: #ffa500;
+}
+
+.linkback:hover{
+    background-color: #ffa500;
+    border-radius: 20px 30px;
+    color: white;
+    padding: 2px 30px 2px 30px;
+    
+}
+
+.title {
+    text-align: center;
+}
+
+
+
