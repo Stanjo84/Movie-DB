@@ -48,12 +48,10 @@
           $.ajax({
             method: 'GET',
             url: "https://www.omdbapi.com/?i=" + movieID + "&apikey=thewdb",
-            success: function(results){
-              //  $("p").addClass("new");
+            success: function(results){              
                
-                var movies = results;
+                var movies = results;                
                 
-                //Create a string with information you want to return like actors, plot, etc....
                 let movieString = "<p>" + movies.Plot + "</p>"
                 container.append(movieString);
             }
